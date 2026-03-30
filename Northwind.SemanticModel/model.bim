@@ -1,0 +1,2700 @@
+{
+  "compatibilityLevel": 1600,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Orders\",\"Customers\",\"Employees\",\"Order Details\",\"Shippers\",\"台灣銷售資料\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"MCP-PBIModeling\",\"DevMode\"]"
+      }
+    ],
+    "culture": "zh-TW",
+    "cultures": [
+      {
+        "name": "zh-TW",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "2332e36f-4af9-4d53-96ce-7a2252bd741e",
+        "fromColumn": "OrderDate",
+        "fromTable": "Orders",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_d6ff1a40-8597-4040-a53e-5e463ba18b37"
+      },
+      {
+        "name": "25ec8e78-b1c8-4778-aadf-fdba1eedb1c3",
+        "fromColumn": "RequiredDate",
+        "fromTable": "Orders",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_2d9b51ab-081e-4415-b3a0-43e7875a8395"
+      },
+      {
+        "name": "2658d1be-8afd-4c72-aeb6-907b491bff49",
+        "fromColumn": "ShippedDate",
+        "fromTable": "Orders",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_cbf4ae55-2ddb-41d7-8d21-b412fc29fcd9"
+      },
+      {
+        "name": "0927224e-270c-41ec-971b-cba9cd46a348",
+        "fromColumn": "BirthDate",
+        "fromTable": "Employees",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_d3d6bc48-a408-42ed-8d8f-632893b0cc2e"
+      },
+      {
+        "name": "f21f0ef1-c32a-4528-bd99-e04b0caf845f",
+        "fromColumn": "HireDate",
+        "fromTable": "Employees",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_0ece5ae3-acf7-417c-a1da-0e2215107a13"
+      },
+      {
+        "name": "f14a53d6-b6f2-4a57-8a5e-271dd19bcc3e",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS"
+          }
+        ],
+        "fromColumn": "CustomerID",
+        "fromTable": "Orders",
+        "toColumn": "CustomerID",
+        "toTable": "Customers"
+      },
+      {
+        "name": "9171e14c-cead-4d2f-90e7-e037e262e5c8",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS"
+          }
+        ],
+        "fromColumn": "EmployeeID",
+        "fromTable": "Orders",
+        "toColumn": "EmployeeID",
+        "toTable": "Employees"
+      },
+      {
+        "name": "f7ac1c4a-28f1-421d-a9f2-12376d7d9dfc",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS"
+          }
+        ],
+        "fromColumn": "ShipVia",
+        "fromTable": "Orders",
+        "toColumn": "ShipperID",
+        "toTable": "Shippers"
+      },
+      {
+        "name": "c2ed73c8-b2f2-4c6f-ae4a-09a1c197d7a7",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS"
+          }
+        ],
+        "fromColumn": "OrderID",
+        "fromTable": "Order Details",
+        "toColumn": "OrderID",
+        "toTable": "Orders"
+      },
+      {
+        "name": "51368e1a-9fd5-4702-9b10-06fd337cd1d3",
+        "fromColumn": "日期",
+        "fromTable": "台灣銷售資料",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6"
+      }
+    ],
+    "sourceQueryCulture": "zh-TW",
+    "tables": [
+      {
+        "name": "Orders",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "OrderID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b780b332-8a25-443b-b111-36aee140fa14",
+            "sourceColumn": "OrderID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CustomerID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d09abb35-9ad3-4eb0-96c0-12d96517de0d",
+            "sourceColumn": "CustomerID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EmployeeID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6b4e625a-1ac2-43c1-b5ae-08c58b3dfdf7",
+            "sourceColumn": "EmployeeID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OrderDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "5c9da248-2913-42d3-858b-c3a0f156fea4",
+            "sourceColumn": "OrderDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "變化",
+                "defaultHierarchy": {
+                  "hierarchy": "日期階層",
+                  "table": "LocalDateTable_d6ff1a40-8597-4040-a53e-5e463ba18b37"
+                },
+                "isDefault": true,
+                "relationship": "2332e36f-4af9-4d53-96ce-7a2252bd741e"
+              }
+            ]
+          },
+          {
+            "name": "RequiredDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "b6aa645a-86f3-4221-807e-43d6b65dc0e3",
+            "sourceColumn": "RequiredDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "變化",
+                "defaultHierarchy": {
+                  "hierarchy": "日期階層",
+                  "table": "LocalDateTable_2d9b51ab-081e-4415-b3a0-43e7875a8395"
+                },
+                "isDefault": true,
+                "relationship": "25ec8e78-b1c8-4778-aadf-fdba1eedb1c3"
+              }
+            ]
+          },
+          {
+            "name": "ShippedDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "5203eaa8-287d-4b74-beb2-680864f6df10",
+            "sourceColumn": "ShippedDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "變化",
+                "defaultHierarchy": {
+                  "hierarchy": "日期階層",
+                  "table": "LocalDateTable_cbf4ae55-2ddb-41d7-8d21-b412fc29fcd9"
+                },
+                "isDefault": true,
+                "relationship": "2658d1be-8afd-4c72-aeb6-907b491bff49"
+              }
+            ]
+          },
+          {
+            "name": "ShipVia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "94c3bf9b-eb33-4e92-bc6b-d674fd0d154c",
+            "sourceColumn": "ShipVia",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Freight",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"zh-TW\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\"NT$\"#,0.###############;-\"NT$\"#,0.###############;\"NT$\"#,0.###############",
+            "lineageTag": "3d15830d-be84-4058-8a8f-7992bcab1a8d",
+            "sourceColumn": "Freight",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ShipName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b3200c73-fa3f-4490-8131-f7cd3ee8dbf0",
+            "sourceColumn": "ShipName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ShipAddress",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d6664a92-db08-4319-b5a9-73446d1ef6be",
+            "sourceColumn": "ShipAddress",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ShipCity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6349193e-d8a2-4589-ad12-7a66a9b11baf",
+            "sourceColumn": "ShipCity",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ShipRegion",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "024f4687-d6e9-4ca1-8259-e2ef774aacb7",
+            "sourceColumn": "ShipRegion",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ShipPostalCode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4130661d-ee31-4ca5-89f5-61c48f38ae04",
+            "sourceColumn": "ShipPostalCode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ShipCountry",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "af24ccb3-f756-4204-a562-d6d3bd9ebf6b",
+            "sourceColumn": "ShipCountry",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "178dcdd9-59f5-46f1-aee6-12f471356898",
+        "partitions": [
+          {
+            "name": "Orders",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    來源 = Sql.Database(\".\", \"Northwind\"),",
+                "    dbo_Orders = 來源{[Schema=\"dbo\",Item=\"Orders\"]}[Data]",
+                "in",
+                "    dbo_Orders"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_11d1170f-af75-464a-b731-de2ff15c7bc7",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "5f814175-6b3c-4d78-8afa-26bc88eb9332",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "年",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "d3e9e1b9-281f-485d-8fa4-7265b3e6978a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "111a0c7f-926d-4ac3-abd7-3bf1eb0118a5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "月",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "873bda2f-ef05-406a-98de-969864b647c8",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "788618a7-b798-4284-b03d-a1a8adbcaea4",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "季",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "2797f7d9-4a61-4086-94ee-41b62a3a569b",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "日",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "fac8bd95-dfb9-42ff-93dc-79f22ae2709d",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "日期階層",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "年",
+                "column": "年",
+                "lineageTag": "93bb3f15-601e-4777-b2c5-437120fdb98e",
+                "ordinal": 0
+              },
+              {
+                "name": "季",
+                "column": "季",
+                "lineageTag": "2212e7a4-2ba2-4873-bd73-db2e0528bb1f",
+                "ordinal": 1
+              },
+              {
+                "name": "月",
+                "column": "月",
+                "lineageTag": "8b473409-755a-44b6-ac30-0acda2e83c73",
+                "ordinal": 2
+              },
+              {
+                "name": "日",
+                "column": "日",
+                "lineageTag": "52573982-0a8d-4530-aee0-3ede3a4e03ed",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "4185c589-52fc-4589-99ef-5f8972e729f1"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "3ce35c77-9490-424b-bcec-1cde6808465a",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_11d1170f-af75-464a-b731-de2ff15c7bc7",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_d6ff1a40-8597-4040-a53e-5e463ba18b37",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "28799143-980d-47a1-836a-97c15cf2ae86",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "年",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "8266ac5b-841e-4e56-ac14-d6adacd67ba1",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "c705316d-822e-4172-ba8e-4cbc44666a94",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "月",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "61747eca-11da-41dd-bbdb-471d858452b3",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "66bc583a-5dec-4e9a-9dc9-0a3ef27d6ef8",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "季",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "4c6d8031-2ead-44f2-8a8a-b9613f061ce8",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "日",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "f94dc21d-3147-429a-85b0-bf21239aa7b0",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "日期階層",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "年",
+                "column": "年",
+                "lineageTag": "185f4314-e36e-4b0d-aaf2-9826dc638820",
+                "ordinal": 0
+              },
+              {
+                "name": "季",
+                "column": "季",
+                "lineageTag": "d25d4a78-e6db-47c2-8457-7dca167676bd",
+                "ordinal": 1
+              },
+              {
+                "name": "月",
+                "column": "月",
+                "lineageTag": "a77ad487-9491-4701-8db1-66431d6d0c68",
+                "ordinal": 2
+              },
+              {
+                "name": "日",
+                "column": "日",
+                "lineageTag": "0c2445bd-d57f-41f1-bcb3-d3d3c2834abe",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "4f6e9142-5928-43a0-963e-f919ef5e40ae"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "8ae56e8a-8a57-4d1c-828c-25fe4ca17399",
+        "partitions": [
+          {
+            "name": "LocalDateTable_d6ff1a40-8597-4040-a53e-5e463ba18b37",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Orders'[OrderDate])), 1, 1), Date(Year(MAX('Orders'[OrderDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_2d9b51ab-081e-4415-b3a0-43e7875a8395",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "4fd0d30e-240f-46da-9ace-e278706e3605",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "年",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "65f896b8-2d20-489d-8fb9-be2ba7eb24f6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "d987a8ef-3203-465d-8ab3-8386298f2cce",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "月",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "6e6a8959-182e-42f3-b0e0-f341db9d16a3",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "5c7b1249-1982-4893-9ca0-c4ba577a0a5d",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "季",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "a0ae0983-6f11-4696-90e5-1a742fb1ddf9",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "日",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "2c7d6154-5d1d-46a7-b45a-0e84bc791567",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "日期階層",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "年",
+                "column": "年",
+                "lineageTag": "ba3661f7-92c6-40f9-9cd9-7cd29627d494",
+                "ordinal": 0
+              },
+              {
+                "name": "季",
+                "column": "季",
+                "lineageTag": "4504e6b4-010e-4bac-aaef-ffdbfd1583cf",
+                "ordinal": 1
+              },
+              {
+                "name": "月",
+                "column": "月",
+                "lineageTag": "f37f8b98-1a27-498e-bc3c-0acb814be8e6",
+                "ordinal": 2
+              },
+              {
+                "name": "日",
+                "column": "日",
+                "lineageTag": "4656656c-37a7-4b39-b3d5-b744a4a1a5d8",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "28a3c801-df93-4933-a4a6-fce9a4e8a7f6"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "6661894c-453c-4e5a-9a72-f4b57c4dddd7",
+        "partitions": [
+          {
+            "name": "LocalDateTable_2d9b51ab-081e-4415-b3a0-43e7875a8395",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Orders'[RequiredDate])), 1, 1), Date(Year(MAX('Orders'[RequiredDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_cbf4ae55-2ddb-41d7-8d21-b412fc29fcd9",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "05ca0421-d583-4921-a798-d579a9038efd",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "年",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "6cf4486a-97a0-4f17-95ba-d68710ccc4eb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "8c12ba39-efb7-42aa-9505-c147a53d674a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "月",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "b1ab637d-7076-4f78-85e1-89ec905cf772",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "0f930699-2673-4469-962a-4369574360b0",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "季",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "7616a0f6-7552-4bb8-b5f8-8a1234377b8b",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "日",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "53e03535-e168-4c82-8906-b19f3a395cbf",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "日期階層",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "年",
+                "column": "年",
+                "lineageTag": "9a32e833-52b1-4e8f-9659-4344fcda1a19",
+                "ordinal": 0
+              },
+              {
+                "name": "季",
+                "column": "季",
+                "lineageTag": "8256e0df-5cd9-46d5-9d80-7246f5f5beb9",
+                "ordinal": 1
+              },
+              {
+                "name": "月",
+                "column": "月",
+                "lineageTag": "4d1e3dfc-a4e8-4d3c-ad90-9d681210df36",
+                "ordinal": 2
+              },
+              {
+                "name": "日",
+                "column": "日",
+                "lineageTag": "64016d11-4e67-4445-a5cf-6e84f66b83cb",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "6b786e57-598c-4bfb-b59f-9aae9eb9ed43"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "fd1e07dc-8514-4511-a71d-60c10cd1298d",
+        "partitions": [
+          {
+            "name": "LocalDateTable_cbf4ae55-2ddb-41d7-8d21-b412fc29fcd9",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Orders'[ShippedDate])), 1, 1), Date(Year(MAX('Orders'[ShippedDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "Customers",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "CustomerID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d7950055-282d-4a6e-bc51-376a59e97df0",
+            "sourceColumn": "CustomerID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CompanyName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "45857085-77ef-46ae-adfe-cfc6fbd216f2",
+            "sourceColumn": "CompanyName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ContactName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d0823f71-e109-49fd-9c6e-53ed56a5442e",
+            "sourceColumn": "ContactName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ContactTitle",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8ad278aa-35dd-4340-9986-52b3bfd35d5d",
+            "sourceColumn": "ContactTitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a400e3a5-082d-4bb8-aaee-16c31135362e",
+            "sourceColumn": "Address",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8c63f582-094a-4798-8da5-ed6d86809ae7",
+            "sourceColumn": "City",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Region",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f3435318-d668-4762-9d0f-ea80e1c0a05f",
+            "sourceColumn": "Region",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PostalCode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "09e24324-a882-4cd3-91d2-c775a3706e27",
+            "sourceColumn": "PostalCode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "52827512-36fb-4840-a208-92904bb8e88c",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Phone",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b8bd90fb-d676-4a19-aac9-f74b5357c6d6",
+            "sourceColumn": "Phone",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fax",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "79ccf079-8a55-497a-a7a9-b71f5aa2e8b7",
+            "sourceColumn": "Fax",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "087cc1cc-0b08-4049-8c7b-b481396763e0",
+        "measures": [
+          {
+            "name": "回頭客數",
+            "description": "購買超過1次的客戶数",
+            "expression": [
+              "VAR CustomerOrders = SUMMARIZE('Orders', 'Orders'[CustomerID], \"OrderCount\", COUNTA('Orders'[OrderID]))",
+              "RETURN",
+              "CALCULATE(",
+              "    DISTINCTCOUNT('Orders'[CustomerID]),",
+              "    FILTER(",
+              "        CustomerOrders,",
+              "        [OrderCount] > 1",
+              "    )",
+              ")"
+            ],
+            "formatString": "#,##0",
+            "lineageTag": "2e587714-ab0d-4ae6-817a-376ad8128457"
+          },
+          {
+            "name": "客戶總數",
+            "description": "有購买記錄的不同客戶总數",
+            "expression": "DISTINCTCOUNT('Orders'[CustomerID])",
+            "formatString": "#,##0",
+            "lineageTag": "d7b64a8a-662a-4421-adbb-7d7fc0ce72bb"
+          },
+          {
+            "name": "平均購買次數",
+            "description": "整体購买購次数 / 客戶数",
+            "expression": "DIVIDE(COUNTA('Orders'[OrderID]), [客戶總數], 0)",
+            "formatString": "0.00",
+            "lineageTag": "bc2a3b99-fd61-43f2-b89e-ee9a7d6235a7"
+          },
+          {
+            "name": "每位客戶平均消費額",
+            "description": "每位客戶的平均消費额",
+            "expression": "DIVIDE(SUMX('Order Details', 'Order Details'[Quantity] * 'Order Details'[UnitPrice]), [客戶總數], 0)",
+            "formatString": "#,##0.00",
+            "lineageTag": "0028265d-e0ee-4cc6-a41d-07f0f9d9553b"
+          },
+          {
+            "name": "一次性客戶數",
+            "description": "只購买一次的客戶数量",
+            "expression": "COUNTROWS(FILTER(SUMMARIZE('Orders', 'Orders'[CustomerID], \"OrderCount\", COUNTA('Orders'[OrderID])), [OrderCount] = 1))",
+            "formatString": "#,##0",
+            "lineageTag": "baf234b6-dbff-496f-a48e-3b1edb0850ca"
+          },
+          {
+            "name": "客戶保留率",
+            "description": "客戶保留率 = 回头客戶数 / 客戶總数",
+            "expression": "DIVIDE(COUNTROWS(FILTER(SUMMARIZE('Orders', 'Orders'[CustomerID], \"OrderCount\", COUNTA('Orders'[OrderID])), [OrderCount] > 1)), DISTINCTCOUNT('Orders'[CustomerID]), 0)",
+            "formatString": "0.00%",
+            "lineageTag": "eb38501a-640c-487c-be3e-12476c17401f"
+          },
+          {
+            "name": "客戶流失率",
+            "description": "客戶流失率 = 一次性客戶数 / 客戶總数",
+            "expression": "DIVIDE(COUNTROWS(FILTER(SUMMARIZE('Orders', 'Orders'[CustomerID], \"OrderCount\", COUNTA('Orders'[OrderID])), [OrderCount] = 1)), DISTINCTCOUNT('Orders'[CustomerID]), 0)",
+            "formatString": "0.00%",
+            "lineageTag": "b97f3cea-c43f-46fd-91d6-ab8ff3c27a24"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Customers",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    來源 = Sql.Database(\".\", \"Northwind\"),",
+                "    dbo_Customers = 來源{[Schema=\"dbo\",Item=\"Customers\"]}[Data]",
+                "in",
+                "    dbo_Customers"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Employees",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "EmployeeID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "35a1bb3c-2efe-420b-91ba-702991a9a076",
+            "sourceColumn": "EmployeeID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LastName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a744c190-8bae-4d9f-8e95-ca51a0d8bc36",
+            "sourceColumn": "LastName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FirstName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "99c6f85f-0b2a-4413-bbcd-eb23741f84a6",
+            "sourceColumn": "FirstName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Title",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c2fba757-c84b-4307-9aaf-4f6a1d7c9818",
+            "sourceColumn": "Title",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TitleOfCourtesy",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "adc97d87-2c7b-42cc-9d5f-093d69011d98",
+            "sourceColumn": "TitleOfCourtesy",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BirthDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "b9c26bf2-2ad2-478f-b454-e527534415d8",
+            "sourceColumn": "BirthDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "變化",
+                "defaultHierarchy": {
+                  "hierarchy": "日期階層",
+                  "table": "LocalDateTable_d3d6bc48-a408-42ed-8d8f-632893b0cc2e"
+                },
+                "isDefault": true,
+                "relationship": "0927224e-270c-41ec-971b-cba9cd46a348"
+              }
+            ]
+          },
+          {
+            "name": "HireDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "38de3e01-0678-4c74-94eb-6c6266470486",
+            "sourceColumn": "HireDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "變化",
+                "defaultHierarchy": {
+                  "hierarchy": "日期階層",
+                  "table": "LocalDateTable_0ece5ae3-acf7-417c-a1da-0e2215107a13"
+                },
+                "isDefault": true,
+                "relationship": "f21f0ef1-c32a-4528-bd99-e04b0caf845f"
+              }
+            ]
+          },
+          {
+            "name": "Address",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7d7648ab-9d9f-4a1b-ad78-3b28086d7797",
+            "sourceColumn": "Address",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0fe928e3-d6df-49f6-a676-a6664ef3cfe3",
+            "sourceColumn": "City",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Region",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0d9bf7da-6ec3-4dff-ba8f-cc3301e86de6",
+            "sourceColumn": "Region",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PostalCode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f6697558-c35f-4098-a8ee-c0b308b8e542",
+            "sourceColumn": "PostalCode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "377f4581-993f-4c45-8a6c-99965e8262b9",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HomePhone",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "97f8302b-976e-47f0-a3e1-f730b7c0604f",
+            "sourceColumn": "HomePhone",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Extension",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eacb1569-8269-48e7-bd06-dfb0d3165702",
+            "sourceColumn": "Extension",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Notes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "910ed04e-a65c-462d-abbc-85d59ae0007b",
+            "sourceColumn": "Notes",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ReportsTo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a210d373-81de-4460-8133-de5bb6dafbce",
+            "sourceColumn": "ReportsTo",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "PhotoPath",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "757a92cb-d6bc-4bd1-9304-6761b9b62526",
+            "sourceColumn": "PhotoPath",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9b3167e3-10ee-4e5a-868c-ccaeefee98cb",
+        "partitions": [
+          {
+            "name": "Employees",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    來源 = Sql.Database(\".\", \"Northwind\"),",
+                "    dbo_Employees = 來源{[Schema=\"dbo\",Item=\"Employees\"]}[Data]",
+                "in",
+                "    dbo_Employees"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_d3d6bc48-a408-42ed-8d8f-632893b0cc2e",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "13901a34-ad37-4fd5-bab5-22758e7a704f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "年",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "d13d1227-f07f-426a-afdd-909d4abb8a5f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "fff1ecf6-9bd2-4c4d-8e2e-299684da4d8f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "月",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "10fa4360-6542-4a2f-abb8-92f2b2eb78fc",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "e96a02b4-7616-48b7-8f3c-58fd841dd609",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "季",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "27773cbe-b711-49f7-8167-51fb069241ed",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "日",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "14a04cc7-05a2-4e1e-8d94-385a9711e006",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "日期階層",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "年",
+                "column": "年",
+                "lineageTag": "fcc625d3-23ce-4cfb-8a82-3c17b0d83d33",
+                "ordinal": 0
+              },
+              {
+                "name": "季",
+                "column": "季",
+                "lineageTag": "cd86fba5-12e8-453c-8190-b2fca7bcc77f",
+                "ordinal": 1
+              },
+              {
+                "name": "月",
+                "column": "月",
+                "lineageTag": "0ba6bcb6-7e0f-40b7-bbf0-6f7d871a7b77",
+                "ordinal": 2
+              },
+              {
+                "name": "日",
+                "column": "日",
+                "lineageTag": "8575f2e1-954f-44d1-ab0e-8f276f84dcc1",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "9e597fb4-fe35-4aed-9d58-b2a38a87def4"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "92f2388e-6d46-4f84-98f1-b7adf70bb04e",
+        "partitions": [
+          {
+            "name": "LocalDateTable_d3d6bc48-a408-42ed-8d8f-632893b0cc2e",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Employees'[BirthDate])), 1, 1), Date(Year(MAX('Employees'[BirthDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_0ece5ae3-acf7-417c-a1da-0e2215107a13",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "7fc650dc-0ef4-4649-9ecc-6242f07e31fb",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "年",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "d5745101-0553-4f27-b46e-c7e87dc4cc0f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "1754d62e-1618-48c5-9f86-f721376bbe49",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "月",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "dbfe994a-7ce6-49c0-8868-f3fd99ad974c",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "95d2e4e6-bbb1-4c01-aa22-080949bcd75f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "季",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "f490db0a-529f-4b04-8cc7-e922a07bfae3",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "日",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "daa8790c-112c-49dd-8483-fecbe1de3afb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "日期階層",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "年",
+                "column": "年",
+                "lineageTag": "4b4ff8f6-ac8d-4b06-be2e-534d97be1a40",
+                "ordinal": 0
+              },
+              {
+                "name": "季",
+                "column": "季",
+                "lineageTag": "1cb39d22-1ec6-497e-8c2c-50de59ea4e8c",
+                "ordinal": 1
+              },
+              {
+                "name": "月",
+                "column": "月",
+                "lineageTag": "c40d3dd7-09c8-44c9-8910-bd2a31b26989",
+                "ordinal": 2
+              },
+              {
+                "name": "日",
+                "column": "日",
+                "lineageTag": "57cad2a5-bf93-4783-bd48-04f46b10849b",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "bb08469a-106e-4d85-b925-94f480de775d"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "dd9202b7-2576-475d-a6b8-117e39c80b9b",
+        "partitions": [
+          {
+            "name": "LocalDateTable_0ece5ae3-acf7-417c-a1da-0e2215107a13",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Employees'[HireDate])), 1, 1), Date(Year(MAX('Employees'[HireDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "Order Details",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "OrderID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "34d8a42b-a374-4004-b6c2-f885ac07b58b",
+            "sourceColumn": "OrderID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProductID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fac69e84-0f04-4464-af87-63f017a48678",
+            "sourceColumn": "ProductID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "UnitPrice",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"zh-TW\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\"NT$\"#,0.###############;-\"NT$\"#,0.###############;\"NT$\"#,0.###############",
+            "lineageTag": "dc9dd0db-8d61-4994-83c6-ea2952bbe48e",
+            "sourceColumn": "UnitPrice",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Quantity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "874f6ce7-831a-4d37-9067-b9d53b6052e6",
+            "sourceColumn": "Quantity",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Discount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "d341cca8-67b2-4492-8bfb-3c9620491f11",
+            "sourceColumn": "Discount",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "a8b0ad7e-f6b5-4b73-a0e1-3e4b100f6a1a",
+        "measures": [
+          {
+            "name": "執行加總",
+            "expression": "RUNNINGSUM([m_SalesAmount],ORDERBY([FirstName],DESC))",
+            "lineageTag": "32cfd016-4f9c-4cce-8193-7b8a4f0c28f4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Order Details",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    來源 = Sql.Database(\".\", \"Northwind\"),",
+                "    #\"dbo_Order Details\" = 來源{[Schema=\"dbo\",Item=\"Order Details\"]}[Data]",
+                "in",
+                "    #\"dbo_Order Details\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Shippers",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ShipperID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6bf2df7c-0b76-49fb-a69f-0c617f0d9030",
+            "sourceColumn": "ShipperID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CompanyName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d0881aaa-2135-484b-9e02-066dc3b2ca76",
+            "sourceColumn": "CompanyName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Phone",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4b0c1835-2c98-44ca-b697-2d1915ad5c13",
+            "sourceColumn": "Phone",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "29d8bc82-8c5e-4675-8bdd-8db8cb108277",
+        "partitions": [
+          {
+            "name": "Shippers",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    來源 = Sql.Database(\".\", \"Northwind\"),",
+                "    dbo_Shippers = 來源{[Schema=\"dbo\",Item=\"Shippers\"]}[Data]",
+                "in",
+                "    dbo_Shippers"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "台灣銷售資料",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "出貨經度",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "Longitude",
+            "dataType": "string",
+            "lineageTag": "1b08be89-69cd-42cb-9e7c-9f7b1a822d38",
+            "sourceColumn": "出貨經度",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "出貨緯度",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "Latitude",
+            "dataType": "string",
+            "lineageTag": "7d5b801b-cee5-47b1-9cab-731622294cd7",
+            "sourceColumn": "出貨緯度",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "到貨經度",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "Longitude",
+            "dataType": "string",
+            "lineageTag": "cd685697-d1f7-4c2e-ab79-6cba68ca1ba3",
+            "sourceColumn": "到貨經度",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "到貨緯度",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "Latitude",
+            "dataType": "string",
+            "lineageTag": "d4787925-9d70-4433-9226-556ec5ac98b2",
+            "sourceColumn": "到貨緯度",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "出貨時間",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b284c57c-9caf-4cbf-be4d-4f50853e0f17",
+            "sourceColumn": "出貨時間",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "到貨時間",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f92302d9-0833-4072-bc4c-2e4c6a37ff44",
+            "sourceColumn": "到貨時間",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "銷售額",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3994937b-2f03-4ef2-8d08-075b10b1dd43",
+            "sourceColumn": "銷售額",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "商品類型",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "79a4084e-8ca9-4944-9674-aa3a8ed4e733",
+            "sourceColumn": "商品類型",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "出貨地址",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dd8574e7-010c-4d91-a637-0abc869cda2c",
+            "sourceColumn": "出貨地址",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "到貨地址",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6ee6d506-6fba-42af-b612-00a161a5d3f9",
+            "sourceColumn": "到貨地址",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "日期",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "expression": [
+              "VAR _d = [出貨時間]",
+              "RETURN",
+              "DATE(YEAR(_d),MONTH(_d),DAY(_d))"
+            ],
+            "formatString": "Long Date",
+            "isDataTypeInferred": true,
+            "lineageTag": "1b6d48fd-925a-4e3e-9cbf-046022bc72b1",
+            "summarizeBy": "none",
+            "type": "calculated",
+            "variations": [
+              {
+                "name": "變化",
+                "defaultHierarchy": {
+                  "hierarchy": "日期階層",
+                  "table": "LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6"
+                },
+                "isDefault": true,
+                "relationship": "51368e1a-9fd5-4702-9b10-06fd337cd1d3"
+              }
+            ]
+          }
+        ],
+        "lineageTag": "1463382d-3921-451c-a067-4545cece3540",
+        "partitions": [
+          {
+            "name": "台灣銷售資料",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"D:\\AI_Dev\\台灣銷售資料.csv\"),[Delimiter=\",\", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])",
+                "in",
+                "    #\"Promoted Headers\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "31d44b6a-a41f-49c7-be6e-d7265dfec2a6",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "年",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "f2ddcd47-45e1-4efe-8c74-b642115ef389",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "9eac79e5-6a3f-4932-83b0-05bc709ce5e8",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "月",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "82ade8fe-5d87-463c-86f9-4880f58d2ccf",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "5f95a6f6-643c-4d8f-85f9-b6a6f46dad2c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "季",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "d280149c-fe69-4536-9109-6b939a5672c6",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "日",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "ee295ae5-f152-44fe-a2b6-a324d5163733",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "日期階層",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "年",
+                "column": "年",
+                "lineageTag": "41bf723d-df53-4a8b-9406-dfffd4159165",
+                "ordinal": 0
+              },
+              {
+                "name": "季",
+                "column": "季",
+                "lineageTag": "15fc6338-331c-46af-a852-95050c1d00fd",
+                "ordinal": 1
+              },
+              {
+                "name": "月",
+                "column": "月",
+                "lineageTag": "14325ea5-a671-4e30-b54e-803a59d70b44",
+                "ordinal": 2
+              },
+              {
+                "name": "日",
+                "column": "日",
+                "lineageTag": "5c749d50-4715-47a3-97c3-3d7c72055d12",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "c75dd5cc-f8ec-4f9e-a2cb-6314774e83c0"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "32539432-e97e-49b1-bb5b-7609dd6e0cf4",
+        "partitions": [
+          {
+            "name": "LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('台灣銷售資料'[日期])), 1, 1), Date(Year(MAX('台灣銷售資料'[日期])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}

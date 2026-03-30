@@ -1,0 +1,100 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":false},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "filters": "[]",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "resources/spcControlChart1ECDA2A11CD64349A045FDEE05369CE6_OrgStore.pbiviz.json",
+            "path": "2/1e4c0f6a-e6cd-423e-abf2-8a59f9de22d8/ResourcePackage/BlobIdV2-83e7925f-5b72-4bc5-95bb-cba5d11362b337X3iaM2TsLi8chAeSMVFqsQ7DiBfVhFWyBPS8FI6Pw=.json",
+            "type": 5
+          }
+        ],
+        "name": "spcControlChart1ECDA2A11CD64349A045FDEE05369CE6_OrgStore",
+        "type": 3
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "traveltimemap3C7539AD45AA4A959A2D169C30CBFEF6.pbiviz.json",
+            "path": "traveltimemap3C7539AD45AA4A959A2D169C30CBFEF6.pbiviz.json",
+            "type": 5
+          }
+        ],
+        "name": "traveltimemap3C7539AD45AA4A959A2D169C30CBFEF6",
+        "type": 0
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "第 3 頁",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "45ff1a7cdbb5897b7c76",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"01f64e1a0435c0082007\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1000,\"width\":164.37689969604864,\"height\":719.7568389057751,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"台灣銷售資料.日期.變化.日期階層.年\",\"active\":true},{\"queryRef\":\"台灣銷售資料.日期.變化.日期階層.月\",\"active\":true},{\"queryRef\":\"台灣銷售資料.日期.變化.日期階層.日\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"台\",\"Entity\":\"台灣銷售資料\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Name\":\"變化\",\"Property\":\"日期\"}},\"Hierarchy\":\"日期階層\"}},\"Level\":\"年\"},\"Name\":\"台灣銷售資料.日期.變化.日期階層.年\",\"NativeReferenceName\":\"日期 年\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Name\":\"變化\",\"Property\":\"日期\"}},\"Hierarchy\":\"日期階層\"}},\"Level\":\"月\"},\"Name\":\"台灣銷售資料.日期.變化.日期階層.月\",\"NativeReferenceName\":\"日期 月\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Name\":\"變化\",\"Property\":\"日期\"}},\"Hierarchy\":\"日期階層\"}},\"Level\":\"日\"},\"Name\":\"台灣銷售資料.日期.變化.日期階層.日\",\"NativeReferenceName\":\"日期 日\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"日期\"}}}]},\"expansionStates\":[{\"roles\":[\"Values\"],\"levels\":[{\"queryRefs\":[\"台灣銷售資料.日期.變化.日期階層.年\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\"}},\"Property\":\"年\"}}],\"isPinned\":true},{\"queryRefs\":[\"台灣銷售資料.日期.變化.日期階層.月\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\"}},\"Property\":\"月\"}}],\"isPinned\":true},{\"queryRefs\":[\"台灣銷售資料.日期.變化.日期階層.日\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"2026L\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'March'\"}}],\"isToggled\":true}]}]}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2026-03-12T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"年\"}},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"月\"}},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"日\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2026L\"}},{\"Literal\":{\"Value\":\"'March'\"}},{\"Literal\":{\"Value\":\"12L\"}}]]}}}]}}}}]},\"filterExpressionMetadata\":{\"expressions\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"台灣銷售資料\"}},\"Name\":\"變化\",\"Property\":\"日期\"}},\"Hierarchy\":\"日期階層\"}},\"Level\":\"年\"}},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"台灣銷售資料\"}},\"Name\":\"變化\",\"Property\":\"日期\"}},\"Hierarchy\":\"日期階層\"}},\"Level\":\"月\"}},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"台灣銷售資料\"}},\"Name\":\"變化\",\"Property\":\"日期\"}},\"Hierarchy\":\"日期階層\"}},\"Level\":\"日\"}}],\"cachedValueItems\":[{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\"}},\"Property\":\"年\"}},\"Right\":{\"Literal\":{\"Value\":\"2026L\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\"}},\"Property\":\"月\"}},\"Right\":{\"Literal\":{\"Value\":\"'March'\"}}}}},{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\"}},\"Property\":\"日\"}},\"Right\":{\"Literal\":{\"Value\":\"12L\"}}}}}],\"valueMap\":{\"0\":\"2026\",\"1\":\"March\",\"2\":\"12\"}}]}}}",
+          "filters": "[{\"name\":\"da2e86c7d50caacccde4\",\"expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"台灣銷售資料\"}},\"Name\":\"變化\",\"Property\":\"日期\"}},\"Hierarchy\":\"日期階層\"}},\"Level\":\"月\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"月\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'January'\"}}],[{\"Literal\":{\"Value\":\"'February'\"}}],[{\"Literal\":{\"Value\":\"'March'\"}}],[{\"Literal\":{\"Value\":\"'April'\"}}]]}}}]},\"type\":\"Categorical\",\"cachedDisplayNames\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\"}},\"Property\":\"月\"}},\"Right\":{\"Literal\":{\"Value\":\"'January'\"}}}}},\"displayName\":\"January\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\"}},\"Property\":\"月\"}},\"Right\":{\"Literal\":{\"Value\":\"'February'\"}}}}},\"displayName\":\"February\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\"}},\"Property\":\"月\"}},\"Right\":{\"Literal\":{\"Value\":\"'March'\"}}}}},\"displayName\":\"March\"},{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6\"}},\"Property\":\"月\"}},\"Right\":{\"Literal\":{\"Value\":\"'April'\"}}}}},\"displayName\":\"April\"}],\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 719.76,
+          "width": 164.38,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a6f7b3050a02808297c7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":870.9971761817065,\"y\":0,\"z\":2000,\"width\":409.3485573971762,\"height\":720.1316144874156,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"台灣銷售資料.出貨經度\"},{\"queryRef\":\"台灣銷售資料.出貨緯度\"},{\"queryRef\":\"台灣銷售資料.到貨經度\"},{\"queryRef\":\"台灣銷售資料.到貨緯度\"},{\"queryRef\":\"台灣銷售資料.出貨時間\"},{\"queryRef\":\"台灣銷售資料.銷售額\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"台\",\"Entity\":\"台灣銷售資料\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"出貨經度\"},\"Name\":\"台灣銷售資料.出貨經度\",\"NativeReferenceName\":\"出貨經度\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"出貨緯度\"},\"Name\":\"台灣銷售資料.出貨緯度\",\"NativeReferenceName\":\"出貨緯度\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"到貨經度\"},\"Name\":\"台灣銷售資料.到貨經度\",\"NativeReferenceName\":\"到貨經度\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"到貨緯度\"},\"Name\":\"台灣銷售資料.到貨緯度\",\"NativeReferenceName\":\"到貨緯度\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"出貨時間\"},\"Name\":\"台灣銷售資料.出貨時間\",\"NativeReferenceName\":\"出貨時間\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"銷售額\"},\"Name\":\"台灣銷售資料.銷售額\",\"NativeReferenceName\":\"銷售額\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"出貨時間\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.13,
+          "width": 409.35,
+          "x": 871.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"bfc52fd5188c8430a468\",\"layouts\":[{\"id\":0,\"position\":{\"x\":163.94057704112953,\"y\":0,\"z\":0,\"width\":707.0565991405771,\"height\":720.1316144874156,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"traveltimemap3C7539AD45AA4A959A2D169C30CBFEF6\",\"projections\":{\"originLng\":[{\"queryRef\":\"台灣銷售資料.出貨經度\"}],\"originLat\":[{\"queryRef\":\"台灣銷售資料.出貨緯度\"}],\"destLng\":[{\"queryRef\":\"台灣銷售資料.到貨經度\"}],\"destLat\":[{\"queryRef\":\"台灣銷售資料.到貨緯度\"}],\"shipTime\":[{\"queryRef\":\"台灣銷售資料.出貨時間\"}],\"tooltips\":[{\"queryRef\":\"台灣銷售資料.銷售額\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"台\",\"Entity\":\"台灣銷售資料\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"出貨經度\"},\"Name\":\"台灣銷售資料.出貨經度\",\"NativeReferenceName\":\"出貨經度\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"出貨緯度\"},\"Name\":\"台灣銷售資料.出貨緯度\",\"NativeReferenceName\":\"出貨緯度\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"到貨經度\"},\"Name\":\"台灣銷售資料.到貨經度\",\"NativeReferenceName\":\"到貨經度\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"到貨緯度\"},\"Name\":\"台灣銷售資料.到貨緯度\",\"NativeReferenceName\":\"到貨緯度\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"出貨時間\"},\"Name\":\"台灣銷售資料.出貨時間\",\"NativeReferenceName\":\"出貨時間\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"銷售額\"},\"Name\":\"台灣銷售資料.銷售額\",\"NativeReferenceName\":\"銷售額\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"台\"}},\"Property\":\"出貨時間\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"colorSettings\":[{\"properties\":{\"routeArrivedColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"displaySettings\":[{\"properties\":{\"timeFormat\":{\"expr\":{\"Literal\":{\"Value\":\"'minutes'\"}}},\"tileSource\":{\"expr\":{\"Literal\":{\"Value\":\"'esri-street'\"}}}}}],\"legendSettings\":[{\"properties\":{\"showBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"buttonSettings\":[{\"properties\":{\"showBackground\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTextBackground\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"tooltipSettings\":[{\"properties\":{\"showArrivalLabel\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.13,
+          "width": 707.06,
+          "x": 163.94,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "第 1 頁",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "50cd719e985221cc918e",
+      "ordinal": 1,
+      "visualContainers": [],
+      "width": 1280.00
+    }
+  ]
+}
