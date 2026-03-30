@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "45ff1a7cdbb5897b7c76",
-  "displayName": "第 3 頁",
-  "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
-}
