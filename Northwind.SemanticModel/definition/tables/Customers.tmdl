@@ -1,0 +1,146 @@
+table Customers
+	lineageTag: 087cc1cc-0b08-4049-8c7b-b481396763e0
+
+	/// 購買超過1次的客戶数
+	measure 回頭客數 =
+			VAR CustomerOrders = SUMMARIZE('Orders', 'Orders'[CustomerID], "OrderCount", COUNTA('Orders'[OrderID]))
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT('Orders'[CustomerID]),
+			    FILTER(
+			        CustomerOrders,
+			        [OrderCount] > 1
+			    )
+			)
+		formatString: #,##0
+		lineageTag: 2e587714-ab0d-4ae6-817a-376ad8128457
+
+	/// 有購买記錄的不同客戶总數
+	measure 客戶總數 = DISTINCTCOUNT('Orders'[CustomerID])
+		formatString: #,##0
+		lineageTag: d7b64a8a-662a-4421-adbb-7d7fc0ce72bb
+
+	/// 整体購买購次数 / 客戶数
+	measure 平均購買次數 = DIVIDE(COUNTA('Orders'[OrderID]), [客戶總數], 0)
+		formatString: 0.00
+		lineageTag: bc2a3b99-fd61-43f2-b89e-ee9a7d6235a7
+
+	/// 每位客戶的平均消費额
+	measure 每位客戶平均消費額 = DIVIDE(SUMX('Order Details', 'Order Details'[Quantity] * 'Order Details'[UnitPrice]), [客戶總數], 0)
+		formatString: #,##0.00
+		lineageTag: 0028265d-e0ee-4cc6-a41d-07f0f9d9553b
+
+	/// 只購买一次的客戶数量
+	measure 一次性客戶數 = COUNTROWS(FILTER(SUMMARIZE('Orders', 'Orders'[CustomerID], "OrderCount", COUNTA('Orders'[OrderID])), [OrderCount] = 1))
+		formatString: #,##0
+		lineageTag: baf234b6-dbff-496f-a48e-3b1edb0850ca
+
+	/// 客戶保留率 = 回头客戶数 / 客戶總数
+	measure 客戶保留率 = DIVIDE(COUNTROWS(FILTER(SUMMARIZE('Orders', 'Orders'[CustomerID], "OrderCount", COUNTA('Orders'[OrderID])), [OrderCount] > 1)), DISTINCTCOUNT('Orders'[CustomerID]), 0)
+		formatString: 0.00%
+		lineageTag: eb38501a-640c-487c-be3e-12476c17401f
+
+	/// 客戶流失率 = 一次性客戶数 / 客戶總数
+	measure 客戶流失率 = DIVIDE(COUNTROWS(FILTER(SUMMARIZE('Orders', 'Orders'[CustomerID], "OrderCount", COUNTA('Orders'[OrderID])), [OrderCount] = 1)), DISTINCTCOUNT('Orders'[CustomerID]), 0)
+		formatString: 0.00%
+		lineageTag: b97f3cea-c43f-46fd-91d6-ab8ff3c27a24
+
+	column CustomerID
+		dataType: string
+		lineageTag: d7950055-282d-4a6e-bc51-376a59e97df0
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		lineageTag: 45857085-77ef-46ae-adfe-cfc6fbd216f2
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactName
+		dataType: string
+		lineageTag: d0823f71-e109-49fd-9c6e-53ed56a5442e
+		summarizeBy: none
+		sourceColumn: ContactName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactTitle
+		dataType: string
+		lineageTag: 8ad278aa-35dd-4340-9986-52b3bfd35d5d
+		summarizeBy: none
+		sourceColumn: ContactTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: a400e3a5-082d-4bb8-aaee-16c31135362e
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 8c63f582-094a-4798-8da5-ed6d86809ae7
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: f3435318-d668-4762-9d0f-ea80e1c0a05f
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		lineageTag: 09e24324-a882-4cd3-91d2-c775a3706e27
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 52827512-36fb-4840-a208-92904bb8e88c
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: b8bd90fb-d676-4a19-aac9-f74b5357c6d6
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fax
+		dataType: string
+		lineageTag: 79ccf079-8a55-497a-a7a9-b71f5aa2e8b7
+		summarizeBy: none
+		sourceColumn: Fax
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Customers = m
+		mode: import
+		source =
+				let
+				    來源 = Sql.Database(".", "Northwind"),
+				    dbo_Customers = 來源{[Schema="dbo",Item="Customers"]}[Data]
+				in
+				    dbo_Customers
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,39 @@
+table Shippers
+	lineageTag: 29d8bc82-8c5e-4675-8bdd-8db8cb108277
+
+	column ShipperID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6bf2df7c-0b76-49fb-a69f-0c617f0d9030
+		summarizeBy: none
+		sourceColumn: ShipperID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		lineageTag: d0881aaa-2135-484b-9e02-066dc3b2ca76
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: 4b0c1835-2c98-44ca-b697-2d1915ad5c13
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Shippers = m
+		mode: import
+		source =
+				let
+				    來源 = Sql.Database(".", "Northwind"),
+				    dbo_Shippers = 來源{[Schema="dbo",Item="Shippers"]}[Data]
+				in
+				    dbo_Shippers
+
+	annotation PBI_ResultType = Table
+

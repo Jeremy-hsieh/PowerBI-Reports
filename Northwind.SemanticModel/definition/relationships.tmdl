@@ -1,0 +1,54 @@
+relationship 2332e36f-4af9-4d53-96ce-7a2252bd741e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.OrderDate
+	toColumn: LocalDateTable_d6ff1a40-8597-4040-a53e-5e463ba18b37.Date
+
+relationship 25ec8e78-b1c8-4778-aadf-fdba1eedb1c3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.RequiredDate
+	toColumn: LocalDateTable_2d9b51ab-081e-4415-b3a0-43e7875a8395.Date
+
+relationship 2658d1be-8afd-4c72-aeb6-907b491bff49
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.ShippedDate
+	toColumn: LocalDateTable_cbf4ae55-2ddb-41d7-8d21-b412fc29fcd9.Date
+
+relationship 0927224e-270c-41ec-971b-cba9cd46a348
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Employees.BirthDate
+	toColumn: LocalDateTable_d3d6bc48-a408-42ed-8d8f-632893b0cc2e.Date
+
+relationship f21f0ef1-c32a-4528-bd99-e04b0caf845f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Employees.HireDate
+	toColumn: LocalDateTable_0ece5ae3-acf7-417c-a1da-0e2215107a13.Date
+
+relationship f14a53d6-b6f2-4a57-8a5e-271dd19bcc3e
+	fromColumn: Orders.CustomerID
+	toColumn: Customers.CustomerID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9171e14c-cead-4d2f-90e7-e037e262e5c8
+	fromColumn: Orders.EmployeeID
+	toColumn: Employees.EmployeeID
+
+	annotation PBI_IsFromSource = FS
+
+relationship f7ac1c4a-28f1-421d-a9f2-12376d7d9dfc
+	fromColumn: Orders.ShipVia
+	toColumn: Shippers.ShipperID
+
+	annotation PBI_IsFromSource = FS
+
+relationship c2ed73c8-b2f2-4c6f-ae4a-09a1c197d7a7
+	fromColumn: 'Order Details'.OrderID
+	toColumn: Orders.OrderID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 51368e1a-9fd5-4702-9b10-06fd337cd1d3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 台灣銷售資料.日期
+	toColumn: LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6.Date
+

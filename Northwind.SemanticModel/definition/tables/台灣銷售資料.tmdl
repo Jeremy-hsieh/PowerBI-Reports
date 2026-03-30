@@ -1,0 +1,119 @@
+table 台灣銷售資料
+	lineageTag: 1463382d-3921-451c-a067-4545cece3540
+
+	column 出貨經度
+		dataType: string
+		lineageTag: 1b08be89-69cd-42cb-9e7c-9f7b1a822d38
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: 出貨經度
+
+		annotation SummarizationSetBy = Automatic
+
+	column 出貨緯度
+		dataType: string
+		lineageTag: 7d5b801b-cee5-47b1-9cab-731622294cd7
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: 出貨緯度
+
+		annotation SummarizationSetBy = Automatic
+
+	column 到貨經度
+		dataType: string
+		lineageTag: cd685697-d1f7-4c2e-ab79-6cba68ca1ba3
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: 到貨經度
+
+		annotation SummarizationSetBy = Automatic
+
+	column 到貨緯度
+		dataType: string
+		lineageTag: d4787925-9d70-4433-9226-556ec5ac98b2
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: 到貨緯度
+
+		annotation SummarizationSetBy = Automatic
+
+	column 出貨時間
+		dataType: string
+		lineageTag: b284c57c-9caf-4cbf-be4d-4f50853e0f17
+		summarizeBy: none
+		sourceColumn: 出貨時間
+
+		annotation SummarizationSetBy = Automatic
+
+	column 到貨時間
+		dataType: string
+		lineageTag: f92302d9-0833-4072-bc4c-2e4c6a37ff44
+		summarizeBy: none
+		sourceColumn: 到貨時間
+
+		annotation SummarizationSetBy = Automatic
+
+	column 銷售額
+		dataType: string
+		lineageTag: 3994937b-2f03-4ef2-8d08-075b10b1dd43
+		summarizeBy: none
+		sourceColumn: 銷售額
+
+		annotation SummarizationSetBy = Automatic
+
+	column 商品類型
+		dataType: string
+		lineageTag: 79a4084e-8ca9-4944-9674-aa3a8ed4e733
+		summarizeBy: none
+		sourceColumn: 商品類型
+
+		annotation SummarizationSetBy = Automatic
+
+	column 出貨地址
+		dataType: string
+		lineageTag: dd8574e7-010c-4d91-a637-0abc869cda2c
+		summarizeBy: none
+		sourceColumn: 出貨地址
+
+		annotation SummarizationSetBy = Automatic
+
+	column 到貨地址
+		dataType: string
+		lineageTag: 6ee6d506-6fba-42af-b612-00a161a5d3f9
+		summarizeBy: none
+		sourceColumn: 到貨地址
+
+		annotation SummarizationSetBy = Automatic
+
+	column 日期 =
+			VAR _d = [出貨時間]
+			RETURN
+			DATE(YEAR(_d),MONTH(_d),DAY(_d))
+		formatString: Long Date
+		lineageTag: 1b6d48fd-925a-4e3e-9cbf-046022bc72b1
+		summarizeBy: none
+
+		variation 變化
+			isDefault
+			relationship: 51368e1a-9fd5-4702-9b10-06fd337cd1d3
+			defaultHierarchy: LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6.日期階層
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 台灣銷售資料 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\AI_Dev\台灣銷售資料.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+				in
+				    #"Promoted Headers"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

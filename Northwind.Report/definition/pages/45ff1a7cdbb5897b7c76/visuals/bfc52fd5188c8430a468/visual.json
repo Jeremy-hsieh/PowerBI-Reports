@@ -1,0 +1,261 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "bfc52fd5188c8430a468",
+  "position": {
+    "x": 163.94057704112953,
+    "y": 0,
+    "z": 0,
+    "height": 720.13161448741562,
+    "width": 707.05659914057708,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "traveltimemap3C7539AD45AA4A959A2D169C30CBFEF6",
+    "query": {
+      "queryState": {
+        "originLng": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "台灣銷售資料"
+                    }
+                  },
+                  "Property": "出貨經度"
+                }
+              },
+              "queryRef": "台灣銷售資料.出貨經度",
+              "nativeQueryRef": "出貨經度"
+            }
+          ]
+        },
+        "originLat": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "台灣銷售資料"
+                    }
+                  },
+                  "Property": "出貨緯度"
+                }
+              },
+              "queryRef": "台灣銷售資料.出貨緯度",
+              "nativeQueryRef": "出貨緯度"
+            }
+          ]
+        },
+        "destLng": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "台灣銷售資料"
+                    }
+                  },
+                  "Property": "到貨經度"
+                }
+              },
+              "queryRef": "台灣銷售資料.到貨經度",
+              "nativeQueryRef": "到貨經度"
+            }
+          ]
+        },
+        "destLat": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "台灣銷售資料"
+                    }
+                  },
+                  "Property": "到貨緯度"
+                }
+              },
+              "queryRef": "台灣銷售資料.到貨緯度",
+              "nativeQueryRef": "到貨緯度"
+            }
+          ]
+        },
+        "shipTime": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "台灣銷售資料"
+                    }
+                  },
+                  "Property": "出貨時間"
+                }
+              },
+              "queryRef": "台灣銷售資料.出貨時間",
+              "nativeQueryRef": "出貨時間"
+            }
+          ]
+        },
+        "tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "台灣銷售資料"
+                    }
+                  },
+                  "Property": "銷售額"
+                }
+              },
+              "queryRef": "台灣銷售資料.銷售額",
+              "nativeQueryRef": "銷售額"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "台灣銷售資料"
+                  }
+                },
+                "Property": "出貨時間"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "colorSettings": [
+        {
+          "properties": {
+            "routeArrivedColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "displaySettings": [
+        {
+          "properties": {
+            "timeFormat": {
+              "expr": {
+                "Literal": {
+                  "Value": "'minutes'"
+                }
+              }
+            },
+            "tileSource": {
+              "expr": {
+                "Literal": {
+                  "Value": "'esri-street'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legendSettings": [
+        {
+          "properties": {
+            "showBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "buttonSettings": [
+        {
+          "properties": {
+            "showBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTextBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "tooltipSettings": [
+        {
+          "properties": {
+            "showArrivalLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

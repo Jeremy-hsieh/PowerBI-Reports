@@ -1,0 +1,30 @@
+model Model
+	culture: zh-TW
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: zh-TW
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Orders","Customers","Employees","Order Details","Shippers","台灣銷售資料"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
+
+ref table Orders
+ref table DateTableTemplate_11d1170f-af75-464a-b731-de2ff15c7bc7
+ref table LocalDateTable_d6ff1a40-8597-4040-a53e-5e463ba18b37
+ref table LocalDateTable_2d9b51ab-081e-4415-b3a0-43e7875a8395
+ref table LocalDateTable_cbf4ae55-2ddb-41d7-8d21-b412fc29fcd9
+ref table Customers
+ref table Employees
+ref table LocalDateTable_d3d6bc48-a408-42ed-8d8f-632893b0cc2e
+ref table LocalDateTable_0ece5ae3-acf7-417c-a1da-0e2215107a13
+ref table 'Order Details'
+ref table Shippers
+ref table 台灣銷售資料
+ref table LocalDateTable_3c2cf4cb-4001-41bf-9c29-368cce6323e6
+
+ref cultureInfo zh-TW
+
